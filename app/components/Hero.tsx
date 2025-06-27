@@ -1,11 +1,11 @@
 
 import Link from 'next/link';
-
+import bgImage from '@/public/bg-image.jpg'
 const Hero = () => {
   return (
     <section
       className="relative bg-cover bg-center h-screen flex items-center justify-center text-white"
-      style={{ backgroundImage: "url('https://placehold.co/1920x1080')" }}
+      style={{ backgroundImage: `url(${bgImage.src || bgImage})` }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 text-center p-8 max-w-3xl mx-auto">
