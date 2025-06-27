@@ -17,6 +17,8 @@
 /.next/
 /out/
 
+#gemini
+GEMINI.md
 # production
 /build
 
