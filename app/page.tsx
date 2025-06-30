@@ -1,18 +1,22 @@
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Gallery from './components/Gallery';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+import Hero from "./components/Hero";
+import Vision from "./components/Vision";
+import Process from "./components/Process";
+import Gallery from "./components/Gallery";
+import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 
 const Home = () => {
   return (
-    <main>
+    <>
       <Hero />
-      <Services />
+      <Vision />
+      <Process />
       <Gallery />
+      <Services />
       <Testimonials />
       <Contact />
-    </main>
+    </>
   );
 };
 

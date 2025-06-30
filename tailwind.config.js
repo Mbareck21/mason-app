@@ -9,6 +9,13 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         stone: {
@@ -21,6 +28,7 @@ module.exports = {
           700: '#44403c',
           800: '#292524',
           900: '#1c1917',
+          950: '#0c0a09',
         },
         orange: {
           700: '#c2410c',
@@ -30,7 +38,24 @@ module.exports = {
           700: '#047857',
         }
       },
+      keyframes: {
+        slideDown: {
+          from: { height: 0 },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        slideUp: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-radix')()],
+  corePlugins: {
+    container: false,
+  },
 };
